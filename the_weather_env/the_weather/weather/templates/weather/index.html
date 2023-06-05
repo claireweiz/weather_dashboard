@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+<body>
+    <section class="hero is-link">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Weather Dashboard
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                {{ form.name }}
+                                <!--input class="input" type="text" placeholder="City Name"-->
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-outlined">
+                                    Add City
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-flex is-vcentered">
+                <div class="column">
+                    {% for weather in weather_data reversed%}
+                    <div class="box">
+                        <div class="control">
+                            <button class="button is-outlined is-pulled-right"><a href="{{ weather.city }}/delete">Delete</a></button>
+                        </div>
+                        <figure class="image is-96x96">
+                            <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                        </figure>
+
+                        <div class='content'>
+                            <span class ="title" style="text-transform:capitalize;">{{ weather.city }} {{weather.country_code}}</span>
+                            <br>Temperature: {{ weather.temperature }}° C
+                            <br>Feels Like: {{ weather.feels_like }}° C
+                            <br> {{ weather.description }}
+                            <br>Temp High: {{ weather.temp_max }}° C
+                            <br>Temp Low: {{ weather.temp_min }}° C
+                            <br> Wind: {{ weather.wind_speed }}km/h
+                            <br> Humidity: {{ weather.humidity }}%
+                            <br></br>
+                            <br> {{ weather.time }} (UTC/GMT)
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p></p>
+        </div>
+    </footer>
+</body>
+</html>
