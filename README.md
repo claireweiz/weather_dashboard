@@ -31,7 +31,9 @@ While virtual environment is activated, run:
 (weather_dashboard) python manage.py runserver
 ```
 Then you will see this:
+
 *Starting development server at http://127.0.0.1:8000/*
+
 Open the browser and visit the URL.
 
 
