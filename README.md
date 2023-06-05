@@ -29,10 +29,10 @@ While virtual environment is activated, run:
 ```
 (weather_dashboard) cd the_weather
 (weather_dashboard) python manage.py runserver
-
 ```
-And see 'Starting development server at http://127.0.0.1:8000/
-', open the browser and visit the URL.
+Then you will see this:
+*Starting development server at http://127.0.0.1:8000/*
+Open the browser and visit the URL.
 
 
 <h2>Thoughts</h2>
