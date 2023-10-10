@@ -19,7 +19,7 @@ Write command lines in ternimal:
 git clong https://github.com/claireweiz/weather_dashboard.git
 ```
 
-Under 'weather_dashboard' respository, run:
+Under 'the_weather_env' respository, run:
 ```
 pipenv install django
 pipenv install requests
@@ -27,8 +27,8 @@ pipenv shell
 ```
 While virtual environment is activated, run:
 ```
-(weather_dashboard) cd the_weather
-(weather_dashboard) python manage.py runserver
+(the_weather_env) cd the_weather
+(the_weather_env) python manage.py runserver
 ```
 Then you will see this:
 
