@@ -2,7 +2,7 @@
  
 <h2>Description</h2>
 
-A weather dashboard, fetching live updates from API (OpenWeatherMap), and using Django as GUI. The platform and add and delete different cities' weather info freely.
+A weather dashboard, fetching live updates from API (OpenWeatherMap), and using Django as GUI. Users can add in / delete different cities' weather info freely.
 
 
 ![image](https://github.com/claireweiz/weather_dashboard/blob/main/dashboard.png)
