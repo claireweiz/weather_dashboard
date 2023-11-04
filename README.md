@@ -41,4 +41,4 @@ Open the browser and visit the URL.
 
 The purpose of this project was to familiarize myself with Django, Bulma (a CSS framework) and how to use an API to present live data. Compared to Flask and Tkinter, I found Django to be more customizable as well as scalable.
 
-At the start of the project I found the web framework and the set-up quite challenging. However, I performed my own research and did lots of problem-solving to complete the project. Upon completion, I found I had a lot more confidence to tackle coding exercises that I had not encountered before.
+At the start of the project, I found the web framework and the set-up quite challenging. However, I performed my own research and did lots of problem-solving to complete the project. Upon completion, I found I had a lot more confidence to tackle coding exercises that I had not encountered before.
