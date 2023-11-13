@@ -16,7 +16,7 @@ A weather dashboard using Django as the GUI that fetches live updates from the O
 
 Write the following command lines in the terminal:
 ```
-git clong https://github.com/claireweiz/weather_dashboard.git
+git clone https://github.com/claireweiz/weather_dashboard.git
 ```
 
 Under 'the_weather_env' repository, run:
