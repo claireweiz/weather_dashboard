@@ -15,9 +15,9 @@ A weather dashboard built with Django and Bulma that fetches live updates from t
 
 <h2>Setup steps</h2>
 
-You can follow the setup tips to complete Django environment settings, and run my app in your local server.
+You can follow the instructions below to set up the Django environment and run my app in your local server.
 
-First,copy and paste the following command in the terminal to download my code:
+First, copy and paste the following command into your terminal to download my code:
 ```
 git clone https://github.com/claireweiz/weather_dashboard.git
 ```
@@ -27,22 +27,24 @@ Run the following command to change to the 'the_weather_env' directory:
 ~$ cd weather_dashboard/the_weather_env
 ```
 
- Now that you are in 'the_weather_env' directory, run the following commands to download the two modules below and then activate the environment:
+ Now that you are in 'the_weather_env' directory, run the following commands to download the two modules below and then activate the virtual environment:
 ```
 ~$ pipenv install django
 ~$ pipenv install requests
 ~$ pipenv shell
 ```
-When the virtual environment has been activated, run the following commands:
+When the virtual environment has been activated, you will see (the_weather_env) at the start of each command line in the terminal, which means the virtual environment has been successfully activated.
 ```
-(the_weather_env) ~$ cd the_weather
-(the_weather_env) ~$ python manage.py runserver
+(the_weather_env) ~$
 ```
-Then you will see the following description in the terminal:
+Then, run the following commands:
+```
+~$ cd the_weather
+~$ python manage.py runserver
+```
+After you have run the commands above, some text will be generated in the terminal that includes a URL, as shown below. You can open your browser, type in the URL that appears in the terminal, and you'll be able to see and test my app!
 
 *Starting development server at http://127.0.0.1:8000/*
-
-Then, open your browser, type in the URL that appears in the terminal, and you'll be able to see and test my app!
 
 
 <h2>Brief Notes</h2>
