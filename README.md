@@ -17,23 +17,23 @@ A weather dashboard built with Django and Bulma that fetches live updates from t
 
 You can follow the setup tips to complete Django environment settings, and run my app in your local server.
 
-Copy the following command in the terminal to download the code:
+First,copy and paste the following command in the terminal to download my code:
 ```
 git clone https://github.com/claireweiz/weather_dashboard.git
 ```
 
-Run the following command to visit 'the_weather_env' repository:
+Run the following command to change to the 'the_weather_env' directory:
 ```
 ~$ cd weather_dashboard/the_weather_env
 ```
 
-In 'the_weather_env' repository, run the following commands:
+ Now that you are in 'the_weather_env' directory, run the following commands to download the two modules below and then activate the environment:
 ```
 ~$ pipenv install django
 ~$ pipenv install requests
 ~$ pipenv shell
 ```
-While the virtual environment is activated, run the following commands:
+When the virtual environment has been activated, run the following commands:
 ```
 (the_weather_env) ~$ cd the_weather
 (the_weather_env) ~$ python manage.py runserver
@@ -42,7 +42,7 @@ Then you will see the following description in the terminal:
 
 *Starting development server at http://127.0.0.1:8000/*
 
-Open the browser and visit the URL.
+Then, open your browser, type in the URL that appears in the terminal, and you'll be able to see and test my app!
 
 
 <h2>Brief Notes</h2>
