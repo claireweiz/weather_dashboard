@@ -2,7 +2,7 @@
  
 <h2>Description</h2>
 
-A weather dashboard using Django as the GUI that fetches live updates from the OpenWeatherMap API. Users can easily add and delete different cities' weather info.
+A weather dashboard built with Django and Bulma that fetches live updates from the OpenWeatherMap API. Users can easily add and delete different cities' weather info.
 
 
 ![image](https://github.com/claireweiz/weather_dashboard/blob/main/dashboard.png)
@@ -11,26 +11,34 @@ A weather dashboard using Django as the GUI that fetches live updates from the O
 
 * Python
 * Django
+* Bulma (CSS framework)
 
-<h2>Set-up steps</h2>
+<h2>Setup steps</h2>
+
+You can follow the setup tips to complete Django environment settings, and run my app in your local server.
 
 Write the following command lines in the terminal:
 ```
-git clone https://github.com/claireweiz/weather_dashboard.git
+~$ git clone https://github.com/claireweiz/weather_dashboard.git
 ```
 
-Under 'the_weather_env' repository, run:
+Go to 'weather_dashboard' repository you just downloaded, and then go to the subdirectory called 'the_weather_env':
 ```
-pipenv install django
-pipenv install requests
-pipenv shell
+~$ cd weather_dashboard/the_weather_env
 ```
-When the virtual environment is activated, run:
+
+In 'the_weather_env' repository, run the following commands:
 ```
-(the_weather_env) cd the_weather
-(the_weather_env) python manage.py runserver
+~$ pipenv install django
+~$ pipenv install requests
+~$ pipenv shell
 ```
-Then you will see this:
+While the virtual environment is activated, run the following commands:
+```
+(the_weather_env) ~$ cd the_weather
+(the_weather_env) ~$ python manage.py runserver
+```
+Then you will see the following description in the terminal:
 
 *Starting development server at http://127.0.0.1:8000/*
 
