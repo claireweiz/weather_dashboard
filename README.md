@@ -4,7 +4,7 @@
 
 https://clairestegner.pythonanywhere.com/ 
 
-(Updated in Jan, 2025)
+(Updated in January 2025)
 
 <br>
 
