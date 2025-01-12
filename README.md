@@ -1,11 +1,19 @@
 <h1> Weather Dashboard </h1> 
  
+<h2>Demo</h2>
+
+https://clairestegner.pythonanywhere.com/ 
+
+(Updated in Jan, 2025)
+
+<br>
+
 <h2>Description</h2>
 
 A weather dashboard built with Django and Bulma that fetches live updates from the OpenWeatherMap API. Users can easily add and delete different cities' weather info.
 
+<img src="dashboard.png" width="600"/>
 
-![image](https://github.com/claireweiz/weather_dashboard/blob/main/dashboard.png)
 
 <h2>Skills & Tools</h2>
 
