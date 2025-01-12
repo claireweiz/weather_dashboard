@@ -1,4 +1,3 @@
-
 from django.shortcuts import (get_object_or_404,
                               render,
                               HttpResponseRedirect)
@@ -22,24 +21,36 @@ def index(request):
     formatted_time = current_time.strftime("%A, %B %d %Y, %H:%M:%S %p") # formatting the time using directives, it will take this format Day, Month Date Year, Current Time 
     
     for city in cities:
-        current_time = datetime.now() # getting the current time
-        city_weather = requests.get(url.format(city)).json() #request the API data and convert the JSON to Python data types
-        dt = datetime.fromtimestamp(city_weather['dt'])
-        dt = dt.strftime("%A, %B %d %Y, %I:%M:%S %p")
-        weather = {
-            'city' : city,
-            'country_code': city_weather['sys']['country'],
-            'temperature' : city_weather['main']['temp'],
-            'feels_like': city_weather['main']['feels_like'],
-            'temp_max' : city_weather['main']['temp_max'],
-            'temp_min' : city_weather['main']['temp_min'],
-            'description' : city_weather['weather'][0]['description'],
-            'icon' : city_weather['weather'][0]['icon'],
-            'time': dt,
-            'wind_speed' : city_weather['wind']['speed'],
-            'humidity': city_weather['main']['humidity'],
+        try:
+            city_weather = requests.get(url.format(city)).json()
+            
+            # Check if the API returned an error
+            if city_weather.get('cod') != 200:
+                continue
+                
+            # Get timestamp, default to current time if 'dt' is missing
+            timestamp = city_weather.get('dt', datetime.now().timestamp())
+            dt = datetime.fromtimestamp(timestamp)
+            dt = dt.strftime("%A, %B %d %Y, %I:%M:%S %p")
+            
+            weather = {
+                'city': city,
+                'country_code': city_weather['sys']['country'],
+                'temperature': city_weather['main']['temp'],
+                'feels_like': city_weather['main']['feels_like'],
+                'temp_max': city_weather['main']['temp_max'],
+                'temp_min': city_weather['main']['temp_min'],
+                'description': city_weather['weather'][0]['description'],
+                'icon': city_weather['weather'][0]['icon'],
+                'time': dt,
+                'wind_speed': city_weather['wind']['speed'],
+                'humidity': city_weather['main']['humidity'],
             }
-        weather_data.append(weather) #add the data for the current city into our list
+            weather_data.append(weather)
+        except Exception as e:
+            # Skip this city if there's any error
+            print(f"Error fetching data for {city}: {str(e)}")
+            continue
 
     context = {'weather_data' : weather_data, 'form': form}
     return render(request, 'weather/index.html', context) #returns the index.html template
